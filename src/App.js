@@ -1,11 +1,10 @@
 import React from "react";
-import { Counter } from "./features/counter/Counter";
 import Header from "./Components/Header";
 import MediaAd from "./Components/MediaAd";
 import Movies from "./Components/Movies";
 import Media from "./Components/Media";
-import DataLayer from "./Components/DataLayer";
-import Links from "./Components/Links";
+import DataLayer from "./DataLayer";
+import Footer from "./Components/Footer";
 import "./App.css";
 
 function App() {
@@ -15,9 +14,9 @@ function App() {
       <MediaAd />
       <Movies />
       <DataLayer />
-      <Links />
       <Media />
-      <Media />
+      <DataLayer />
+      <Footer />
     </div>
   );
 }

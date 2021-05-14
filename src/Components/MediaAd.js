@@ -45,7 +45,7 @@ const Heading = styled.p`
   margin: 20px 10px;
   color: white;
   font-weight: 400;
-  padding: 10px 15px;
+  padding: 10px 40px;
 
   p {
     font-size: 15px;
@@ -57,11 +57,12 @@ const Image = styled.div`
   position: absolute;
   color: black;
   height: 100%;
-  right: 2%;
+  right: 3%;
   left: 55%;
-  top: 12%;
+  top: 15%;
 `;
 
 const Container = styled.div`
-  width: 823px;
+  width: 830px;
+  background-color: black;
 `;

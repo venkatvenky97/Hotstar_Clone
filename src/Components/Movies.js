@@ -1,26 +1,25 @@
 import React, { useEffect, useState } from "react";
-import { mediaa } from "./Links";
+import { mediaa } from "../Components/Links";
 import styled from "styled-components";
-import { useDataLayerValue } from "./DataLayer";
-import Media from "./Media";
+import { useDataLayerValue } from "../DataLayer";
+import Media from "../Components/Media";
 
-function Movies() {
+const Movies = () => {
   const [movies, setMovies] = useState([]);
-
-  const [{ links }, dispatch] = useDataLayerValue();
-
+  const [links, dispatch] = useState(useDataLayerValue);
   useEffect(() => {
+    console.log("");
     dispatch({
-      type: "SET_LINKS",
+      type: "SET.LINKS",
     });
   }, [dispatch]);
 
-  console.log(links);
+  console.log(links, dispatch);
   return (
     <Container>
-      <div className="App">
+      <Content>
         <div className="watch">
-          <span className="span">Continue watch</span>
+          <h4>Continue watch</h4>
         </div>
         <div className="media-row">
           {mediaa.map((img) => {
@@ -28,11 +27,51 @@ function Movies() {
           })}
           ;
         </div>
-      </div>
+        <div className="movie">
+          <h4>Shows Recommended For You</h4>
+        </div>
+        <div className="media-row">
+          {mediaa.map((img) => {
+            return <Media img={img.image} />;
+          })}
+        </div>
+        <div className="sports">
+          <h4>Best in Sports</h4>
+        </div>
+
+        <div className="media-row">
+          {mediaa.map((img) => {
+            return <Media img={img.image} />;
+          })}
+        </div>
+      </Content>
     </Container>
   );
-}
+};
 
 export default Movies;
 
-const Container = styled.div``;
+const Content = styled.div`
+  padding-left: 1%;
+  margin-top: 30px;
+
+  media {
+    padding: 0px 10px 30px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  h4 {
+    margin: 80px;
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+    margin-inline-start: 30px;
+    padding: 15px 10px;
+    margin-bottom: 5px;
+  }
+`;
+
+const Container = styled.div`
+  display: grid;
+`;
