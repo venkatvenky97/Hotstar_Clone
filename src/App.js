@@ -1,10 +1,10 @@
 import React from "react";
-import Header from "./Components/Header";
-import MediaAd from "./Components/MediaAd";
-import Movies from "./Components/Movies";
-import Media from "./Components/Media";
+import Header from "./Components/Header/Header";
+import MediaAd from "./Components/MediaAd/MediaAd";
+import Movies from "./Components/Moviess/Movies";
+import Media from "./Components/Media/Media";
 import DataLayer from "./DataLayer";
-import Footer from "./Components/Footer";
+import Footer from "./Components/Footer/Footer";
 import "./App.css";
 
 function App() {
