@@ -1,20 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { mediaa } from "../Link/Links";
 import styled from "styled-components";
-import { useDataLayerValue } from "../../DataLayer";
 import Media from "../Media/Media";
 
 const Movies = () => {
-  const [Movies, setMovies] = useState([]);
-  const [links, dispatch] = useState(useDataLayerValue);
+  const [Movies, setMovies] = useState();
+  const [links, dispatch] = useState();
+    console.log(Movies);
   useEffect(() => {
-    console.log("");
     dispatch({
       type: "SET.LINKS",
     });
   }, [dispatch]);
 
-  console.log(links, dispatch);
+  console.log(links);
   return (
     <Container>
       <Content>
