@@ -1,5 +1,1 @@
-Technology Used
 
-
-React &
-Redux
