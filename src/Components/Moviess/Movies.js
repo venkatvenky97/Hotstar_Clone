@@ -1,16 +1,29 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import { mediaa } from "../Link/Links";
+import { connect } from "react-redux";
 import styled from "styled-components";
 import Media from "../Media/Media";
 
 const Movies = () => {
-  const [Movies, setMovies] = useState([]);
+  const [Movies, setMovies] = useState();
+<<<<<<< HEAD
+  const [links] = useState();
+
+  console.log(Movies);
+  const dispatch = useDispatch();
+
+=======
   const [links, dispatch] = useState();
+    console.log(Movies);
   useEffect(() => {
     dispatch({
       type: "SET.LINKS",
     });
   }, [dispatch]);
+
+>>>>>>> f3e57b04e5d51ca08c0f2c2eceb6018a777fb55a
+  console.log(links);
   return (
     <Container>
       <Content>
@@ -45,7 +58,13 @@ const Movies = () => {
   );
 };
 
-export default Movies;
+const mapDispatchToRedux = (dispatch) => {
+  return {
+    set_data: () => dispatch({ type: "SET_DATA", payload: { data: "links" } }),
+  };
+};
+
+export default connect(mapDispatchToRedux)(Movies);
 
 const Content = styled.div`
   padding-left: 1%;
