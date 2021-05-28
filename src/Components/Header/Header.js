@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { connect } from "react-redux";
 import { Input } from "@material-ui/core";
 
 function Header() {
@@ -24,7 +25,11 @@ function Header() {
   );
 }
 
-export default Header;
+const mapStateToProps = (state) => ({
+  data: state.ListReducer.data,
+});
+
+export default connect(mapStateToProps)(Header);
 
 const Container = styled.div`
   height: 70px;
