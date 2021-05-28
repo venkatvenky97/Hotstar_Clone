@@ -1,6 +1,7 @@
 # Hotstar_Clone
 
-#Technology used
+# Technology used
 
 React
+
 redux
