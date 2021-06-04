@@ -12,14 +12,6 @@ const Movies = () => {
 
   console.log(Movies);
   const dispatch = useDispatch();
-
-  const [links, dispatch] = useState();
-    console.log(Movies);
-  useEffect(() => {
-    dispatch({
-      type: "SET.LINKS",
-    });
-  }, [dispatch]);
   console.log(links);
   return (
     <Container>
