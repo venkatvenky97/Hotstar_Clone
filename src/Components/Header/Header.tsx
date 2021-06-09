@@ -16,7 +16,7 @@ function Header() {
         <span>Disney+</span>
         <Righthead>
           <Input className="search" placeholder="search" />
-          <i class="fas fa-search"></i>
+          <i className="fas fa-search"></i>
           <button>SUBCRIBE</button>
           <span>LOGIN</span>
         </Righthead>
@@ -25,13 +25,13 @@ function Header() {
   );
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: any) => ({
   data: state.ListReducer.data,
 });
 
 export default connect(mapStateToProps)(Header);
 
-const Container = styled.div`
+const Container = styled("div")`
   height: 70px;
   background-color: #121926;
   display: flex;
@@ -39,11 +39,11 @@ const Container = styled.div`
   padding: 0 36px;
 `;
 
-const Logo = styled.img`
+const Logo = styled("img")`
   width: 80px;
 `;
 
-const Menu = styled.div`
+const Menu = styled("div")`
   display: flex;
   padding: 0 30px;
   cursor: pointer;
@@ -57,7 +57,7 @@ const Menu = styled.div`
   }
 `;
 
-const Righthead = styled.div`
+const Righthead = styled("div")`
   input {
     padding: 10 100px;
     bordr: none;

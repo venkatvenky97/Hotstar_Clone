@@ -32,14 +32,14 @@ const MediaAd = () => {
 
 export default MediaAd;
 
-const Description = styled.p`
+const Description = styled("p")`
   font-size: 18px;
   line-height: 25px;
   font-weight: 600;
   padding: 5px 50px;
 `;
 
-const Heading = styled.p`
+const Heading = styled("p")`
   margin-top: 20px;
   font-size: 25px;
   margin: 20px 10px;
@@ -53,7 +53,7 @@ const Heading = styled.p`
   }
 `;
 
-const Image = styled.div`
+const Image = styled("div")`
   position: absolute;
   color: black;
   height: 100%;
@@ -62,7 +62,7 @@ const Image = styled.div`
   top: 15%;
 `;
 
-const Container = styled.div`
+const Container = styled("div")`
   width: 830px;
   background-color: black;
 `;

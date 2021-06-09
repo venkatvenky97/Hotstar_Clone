@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-const Media = ({ img }) => {
+var Media = ({ img: any }) => {
   return (
     <Image>
       <div className="media">
-        <img src={img} alt="" />
+        <img src={any} alt="" />
       </div>
     </Image>
   );
@@ -13,7 +13,7 @@ const Media = ({ img }) => {
 
 export default Media;
 
-const Image = styled.div`
+const Image = styled("div")`
   img {
     width: 250px;
     border-radius: 2px;

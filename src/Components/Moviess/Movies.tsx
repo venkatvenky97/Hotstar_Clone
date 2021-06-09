@@ -7,22 +7,11 @@ import Media from "../Media/Media";
 
 const Movies = () => {
   const [Movies, setMovies] = useState();
-<<<<<<< HEAD
   const [links] = useState();
 
   console.log(Movies);
   const dispatch = useDispatch();
 
-=======
-  const [links, dispatch] = useState();
-    console.log(Movies);
-  useEffect(() => {
-    dispatch({
-      type: "SET.LINKS",
-    });
-  }, [dispatch]);
-
->>>>>>> f3e57b04e5d51ca08c0f2c2eceb6018a777fb55a
   console.log(links);
   return (
     <Container>
@@ -58,7 +47,7 @@ const Movies = () => {
   );
 };
 
-const mapDispatchToRedux = (dispatch) => {
+const mapDispatchToRedux = (dispatch: any) => {
   return {
     set_data: () => dispatch({ type: "SET_DATA", payload: { data: "links" } }),
   };
@@ -66,7 +55,7 @@ const mapDispatchToRedux = (dispatch) => {
 
 export default connect(mapDispatchToRedux)(Movies);
 
-const Content = styled.div`
+const Content = styled("div")`
   padding-left: 1%;
   margin-top: 30px;
 
@@ -87,6 +76,6 @@ const Content = styled.div`
   }
 `;
 
-const Container = styled.div`
+const Container = styled("div")`
   display: grid;
 `;
