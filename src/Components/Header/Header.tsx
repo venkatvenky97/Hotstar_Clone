@@ -3,7 +3,11 @@ import styled from "styled-components";
 import { connect } from "react-redux";
 import { Input } from "@material-ui/core";
 
-function Header() {
+interface HeaderProps {
+  name: "TV" | "Movies" | "Sports" | "News" | "Premium" | "Disney+";
+}
+
+const Header = ({ name }: HeaderProps) => {
   return (
     <Container>
       <Logo src="/assets/starlogo.jpg" />
@@ -23,10 +27,10 @@ function Header() {
       </Menu>
     </Container>
   );
-}
+};
 
 const mapStateToProps = (state: any) => ({
-  data: state.ListReducer.data,
+  data: state.ListReducer,
 });
 
 export default connect(mapStateToProps)(Header);

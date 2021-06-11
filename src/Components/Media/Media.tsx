@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-var Media = ({ img: any }) => {
+let Media = ({ img: any }) => {
   return (
     <Image>
       <div className="media">
