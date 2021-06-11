@@ -1,18 +1,19 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import React, { useState, useEffect } from "react";
 import { mediaa } from "../Link/Links";
 import { connect } from "react-redux";
 import styled from "styled-components";
 import Media from "../Media/Media";
 
-const Movies = () => {
-  const [Movies, setMovies] = useState();
-  const [links] = useState();
+function Movies() {
+  const [Movies, setMovies] = useState([]);
 
-  console.log(Movies);
-  const dispatch = useDispatch();
-
-  console.log(links);
+  useEffect(() => {
+    const getMovies = async () => {
+      const Movies = await fetch("").then((res) => res.json());
+      setMovies(Movies);
+    };
+    getMovies();
+  }, []);
   return (
     <Container>
       <Content>
@@ -45,7 +46,7 @@ const Movies = () => {
       </Content>
     </Container>
   );
-};
+}
 
 const mapDispatchToRedux = (dispatch: any) => {
   return {
